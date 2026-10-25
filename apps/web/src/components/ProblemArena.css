@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Share+Tech+Mono&display=swap');
+
+
+.division {
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(to right, rgb(249, 170, 74) 30%, aqua);
+    z-index: 100;
+    box-shadow: 0 0 15px rgba(249, 170, 74, 0.7);
+}
+
+.problem-arena {
+  font-family: 'Share Tech Mono', monospace;
+  padding: 2rem;
+  background: radial-gradient(circle at center, #010014, #252136);
+  min-height: 100vh;
+  color: #c8e6ff;
+  user-select: none;
+}
+
+.arena-title {
+    margin-top: 30px;
+     text-align: center;
+}
+
+.arena-title h2{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #7dd3fc;
+  text-transform: uppercase;
+  padding-left: 1rem;
+  text-align: center;
+}
+
+.arena-title p {
+    font-family: 'Share Tech Mono', monospace;
+  font-size: 22px;
+  font-weight: 500;
+  color: #ccc;
+  margin-bottom: 25px;
+
+}
+.problem-arena-button {
+    text-align: right;
+    margin-bottom: 10px;
+}
+.all-problems-button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #0a2a1a;
+    color: #4ade80;
+    border: 1px solid #166534;
+    cursor: pointer;
+    transition: background 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
+}
+.all-problems-button:hover {
+    background: #0e4121;
+    color: #a7f3d0;
+    border-color: #36a55f;
+}
+.table-container {
+  overflow-x: auto;
+  border: 1px solid #1e3a5f;
+  border-radius: 25px;
+  background: #080f1c;
+}
+
+.table-container::-webkit-scrollbar {
+  height: 2px;
+  border-radius: 10px;
+}
+
+
+.problems-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.problems-table thead tr {
+  background: #0c1a30;
+  border-bottom: 1px solid #1e4976;
+}
+
+.problems-table th {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: #38bdf8;
+  padding: 0.85rem 1rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.problem-row {
+  border-bottom: 1px solid #0e1f35;
+  transition: background 0.15s ease;
+  cursor: pointer;
+}
+
+.problem-row:hover {
+  background: #0c1e36;
+}
+
+.problem-row:last-child {
+  border-bottom: none;
+}
+
+.problems-table td {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+}
+
+.title-cell {
+  color: #e2f0ff;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 0.02em;
+  min-width: 220px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.problem-row:hover .title-cell {
+  color: #7dd3fc;
+}
+
+.difficulty-badge {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.problem-row:has(.difficulty-badge) .difficulty-badge[data-difficulty="Easy"] {
+  background: #0a2a1a;
+  color: #4ade80;
+  border: 1px solid #166534;
+}
+
+.problem-row:has(.difficulty-badge) .difficulty-badge[data-difficulty="Medium"] {
+  background: #2a230a;
+  color: #debc4a;
+  border: 1px solid #655716;
+}
+
+.problem-row:has(.difficulty-badge) .difficulty-badge[data-difficulty="Hard"] {
+   background: #2a0a0a;
+  color: #de4a4a;
+  border: 1px solid #651616;
+}
+
+.difficulty-badge {
+  background: #0a2a1a;
+  color: #4ade80;
+  border: 1px solid #166534;
+}
+
+tr:has(td .difficulty-badge) .difficulty-badge {
+  background: #0a2a1a;
+  color: #4ade80;
+  border: 1px solid #166534;
+}
+
+.subject-badge {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-block;
+  background: #0d1f3a;
+  color: #93c5fd;
+  border: 1px solid #1e3a6e;
+}
+
+.percentage {
+  color: #67e8f9;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.attempts {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+.appeared-in {
+  color: #f59e0b;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+}
+.table-bottom {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  text-align: center;
+}
+.table-bottom span {
+  color: #f59e0b;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.2s ease-out;
+    text-decoration: none;
+}
+.table-bottom span:hover {
+    color: #f97316;
+}
+
+@media (max-width: 640px) {
+  .problem-arena {
+    padding: 1rem;
+  }
+
+  .arena-title {
+    margin-top: 20px;
+  }
+
+  .arena-title h2 {
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+    padding-left: 0;
+    line-height: 1.2;
+  }
+
+  .arena-title p {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+
+  .problem-arena-button {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .all-problems-button {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 9px 12px;
+  }
+
+  .table-container {
+    border-radius: 14px;
+  }
+
+  .problems-table {
+    min-width: 640px;
+  }
+
+  .problems-table th,
+  .problems-table td {
+    padding: 0.55rem 0.55rem;
+  }
+
+  .problems-table th {
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+  }
+
+  .title-cell {
+    min-width: 180px;
+    font-size: 0.78rem;
+  }
+
+  .difficulty-badge,
+  .subject-badge {
+    font-size: 0.5rem;
+    padding: 2px 6px;
+  }
+
+  .percentage,
+  .attempts,
+  .appeared-in {
+    font-size: 0.68rem;
+  }
+
+  .table-bottom {
+    font-size: 0.72rem;
+    margin-top: 12px;
+  }
+
+  .table-bottom span {
+    margin-left: 6px;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .problem-arena {
+    padding: 1.5rem;
+  }
+
+  .arena-title {
+    margin-top: 24px;
+  }
+
+  .arena-title h2 {
+    font-size: 2.2rem;
+    letter-spacing: 0.14em;
+    padding-left: 0.5rem;
+  }
+
+  .arena-title p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .all-problems-button {
+    font-size: 0.82rem;
+    padding: 9px 16px;
+  }
+
+  .table-container {
+    border-radius: 18px;
+  }
+
+  .problems-table {
+    min-width: 760px;
+  }
+
+  .problems-table th {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+  }
+
+  .problems-table td {
+    padding: 0.65rem 0.75rem;
+  }
+
+  .title-cell {
+    min-width: 200px;
+    font-size: 0.84rem;
+  }
+
+  .difficulty-badge,
+  .subject-badge {
+    font-size: 0.55rem;
+  }
+
+  .percentage,
+  .attempts,
+  .appeared-in {
+    font-size: 0.72rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .arena-title h2 {
+    font-size: 2.6rem;
+    letter-spacing: 0.16em;
+  }
+
+  .arena-title p {
+    font-size: 1.1rem;
+  }
+}

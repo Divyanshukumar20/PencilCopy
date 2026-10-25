@@ -1,0 +1,662 @@
+.contest-sample-container{
+    padding: 60px 20px;
+    background: radial-gradient(circle at center, #121212, #0a0a0a);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+.contest-sample-heading{
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+@keyframes glow{
+    from { text-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+    to { text-shadow: 0 0 40px rgba(255, 255, 255, 0.6); }
+}
+
+.contest-sample-main-heading {
+   font-size: clamp(28px, 5vw, 48px);
+   font-family: 'Orbitron', sans-serif;
+   color: #ffffff;
+   margin-bottom: 10px;
+   font-weight: 700;
+   text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+   animation: glow 2s ease-in-out infinite alternate;
+}
+.contest-sample-subheading{
+    font-size: 18px;
+    color: #f9aa4a;
+    font-weight: 500;
+}
+.contest-sample-content{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+}
+.contest-sample-content-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+}
+.csctop-left{
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+    gap: 5vw;
+}
+.cs-live{
+    background: rgba(244,63,94,0.15);
+    border: 1px solid rgba(244,63,94,0.3);
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.live-dot{
+    width: 7px;
+    height: 7px;
+    background: #e74c3c;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 1.5s infinite;
+}
+
+.live-text{
+    font-size: 14px;
+    font-weight: 600;
+    color: #e74c3c;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.cs-contest-name{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Orbitron", sans-serif;
+}
+
+.cs-timer{
+display: flex;
+align-items: center;
+gap: 5px;
+color: #27ae60;
+background: rgba(39, 174, 96, 0.15);
+border: 1px solid rgba(39, 174, 96, 0.3);
+padding: 5px 10px;
+border-radius: 10px;
+}
+
+.clock-icon{
+ display: flex;
+ align-items: center;
+}
+
+.running-timer{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contest-sample-content-bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.contest-sample-content-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.problems-header{
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.problems-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+}
+
+.problem-card{
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.51, 2.35, 0.63, 0.76);
+    max-width: 320px;
+    /* make card square and hide overflowing content with ellipsis */
+    aspect-ratio: 1 / 1;
+    max-width: 320px;
+    overflow: hidden;
+}
+
+.problem-card:hover{
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.07);
+}
+
+.problem-id{
+    font-size: 24px;
+    font-weight: 700;
+    color: #f9aa4a;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.problem-title{
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.problem-difficulty{
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.problem-difficulty[data-difficulty="Easy"]{
+    background: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+}
+
+.problem-difficulty[data-difficulty="Medium"]{
+    background: rgba(249, 170, 74, 0.2);
+    color: #f9aa4a;
+}
+
+.problem-difficulty[data-difficulty="Hard"]{
+    background: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+}
+
+.cs-analysis{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.cs-solved, .cs-Your-score, .cs-Your-rank, .cs-Participants{
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.analysis-header{
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.analysis-content{
+    font-size: 24px;
+    font-weight: 700;
+    color: #f9aa4a;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.contest-sample-content-right{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cs-leaderboard-header{
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cs-leaderboard-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.cs-leaderboard-container::-webkit-scrollbar{
+    width: 3.5px;
+}
+
+.cs-leaderboard-container::-webkit-scrollbar-track{
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.cs-leaderboard-container::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.cs-leaderboard-container::-webkit-scrollbar-thumb:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.student-card, .your-card{
+    display: grid;
+    grid-template-columns: 40px 40px 1fr 80px;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.01s linear;
+}
+
+.your-card{
+    background: rgba(249, 170, 74, 0.1);
+    border: 1px solid rgba(249, 170, 74, 0.3);
+}
+
+.student-card:hover{
+    background: rgba(255, 255, 255, 0.096);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.your-card:hover{
+    background: rgba(249, 170, 74, 0.15);
+    border-color: rgba(249, 170, 74, 0.4);
+}
+
+.student-rank{
+    font-size: 16px;
+    font-weight: 700;
+    color: #f9aa4a;
+    text-align: center;
+}
+
+.student-avatar{
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, rgb(249, 170, 74), rgb(231, 76, 60));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.student-name{
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.student-score{
+    font-size: 14px;
+    font-weight: 700;
+    color: #2ecc71;
+    text-align: right;
+}
+
+.constest-sample-footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cs-feature-tag{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+     font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 100px;
+    border: 1px solid rgba(182, 227, 255, 0.18);
+    padding: 8px 14px;
+    background: linear-gradient(180deg, rgba(182,227,255,0.06), rgba(182,227,255,0.03));
+    backdrop-filter: blur(4px);
+    text-shadow: 0 0 6px rgba(182, 227, 255, 0.25);
+}
+
+.cs-feature-tag-icon{
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(182, 227, 255, 0.08);
+    color: #b6e3ff;
+    font-size: 18px;
+    flex: 0 0 36px;
+    box-shadow: 0 2px 8px rgba(182,227,255,0.06) inset;
+}
+
+
+
+.cs-cta{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.cs-cta-button{
+    background: linear-gradient(135deg, #f9aa4a, #e74c3c);
+    color: #ffffff;
+    border: none;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 20px rgba(249, 170, 74, 0.3);
+    transition: all 0.3s cubic-bezier(0.51, 2.35, 0.63, 0.76);
+}
+
+.cs-cta-button:hover{
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #e74c3c, #f9aa4a);
+}
+
+.cs-cta-button:active{
+    transform:  scale(0.95);
+}
+
+.cs-cta a{
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contest-sample-content-bottom{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .cs-analysis{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .problems-container{
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .contest-sample-container{
+        padding: 40px 15px;
+    }
+
+    .contest-sample-heading{
+        margin-bottom: 50px;
+    }
+
+    .contest-sample-main-heading{
+        font-size: clamp(20px, 4vw, 32px);
+    }
+
+    .contest-sample-subheading{
+        font-size: 14px;
+    }
+
+    .contest-sample-content-top{
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .csctop-left{
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .cs-contest-name{
+        font-size: 16px;
+    }
+
+    .cs-timer{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cs-analysis{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .problems-container{
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .cs-leaderboard-container{
+        max-height: 400px;
+    }
+
+    .student-card, .your-card{
+        grid-template-columns: 35px 35px 1fr 70px;
+        gap: 8px;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .student-avatar{
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .constest-sample-footer{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .cs-features-tag{
+        font-size: 13px;
+    }
+
+    .cs-cta-button{
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contest-sample-container{
+        padding: 30px 12px;
+    }
+
+    .contest-sample-heading{
+        margin-bottom: 30px;
+    }
+
+    .contest-sample-main-heading{
+        font-size: clamp(18px, 3vw, 24px);
+        margin-bottom: 8px;
+    }
+
+    .contest-sample-subheading{
+        font-size: 12px;
+    }
+
+    .contest-sample-content{
+        padding: 15px;
+    }
+
+    .contest-sample-content-top{
+        flex-direction: column;
+        gap: 12px;
+        padding: 8px 0;
+    }
+
+    .csctop-left{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .cs-live{
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    .cs-contest-name{
+        font-size: 14px;
+    }
+
+    .cs-timer{
+        width: 100%;
+        gap: 4px;
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+
+    .running-timer{
+        font-size: 16px;
+    }
+
+    .problems-header, .cs-leaderboard-header{
+        font-size: 16px;
+    }
+
+    .problems-container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .problem-card{
+        padding: 12px;
+        gap: 6px;
+    }
+
+    .problem-id{
+        font-size: 18px;
+    }
+
+    .problem-title{
+        font-size: 12px;
+    }
+
+    .problem-difficulty{
+        font-size: 10px;
+    }
+
+    .cs-analysis{
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .cs-solved, .cs-Your-score, .cs-Your-rank, .cs-Participants{
+        padding: 12px;
+        gap: 6px;
+    }
+
+    .analysis-header{
+        font-size: 10px;
+    }
+
+    .analysis-content{
+        font-size: 18px;
+    }
+
+    .cs-leaderboard-container{
+        max-height: 350px;
+    }
+
+    .student-card, .your-card{
+        grid-template-columns: 30px 30px 1fr 60px;
+        gap: 6px;
+        padding: 8px;
+    }
+
+    .student-rank{
+        font-size: 14px;
+    }
+
+    .student-avatar{
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+    }
+
+    .student-name{
+        font-size: 12px;
+    }
+
+    .student-score{
+        font-size: 12px;
+    }
+
+    .constest-sample-footer{
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 25px;
+        padding-top: 20px;
+    }
+
+    .cs-features-tag{
+        font-size: 12px;
+    }
+
+    .cs-cta{
+        margin-top: 30px;
+    }
+
+    .cs-cta-button{
+        padding: 10px 20px;
+        font-size: 12px;
+        width: 100%;
+    }
+}
