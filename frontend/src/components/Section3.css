@@ -1,0 +1,11 @@
+.division {
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(to right, rgb(249, 170, 74) 30%, aqua);
+    z-index: 100;
+    box-shadow: 0 0 15px rgba(249, 170, 74, 0.7);
+}
+
+.exactly-heading{
+    
+}

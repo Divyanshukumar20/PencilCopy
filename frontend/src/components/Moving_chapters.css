@@ -1,0 +1,75 @@
+.marquee{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 20px 0;
+    margin-bottom: 50px;
+
+}
+
+.track{
+    display: inline-flex;
+    gap: 60px;
+    animation: infinite-horizontal-scroll 100s linear infinite;
+}
+
+.marquee-item{
+    font-size: 18px;
+    color: #eaf6ff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(182, 227, 255, 0.35);
+    background: rgba(182, 227, 255, 0.12);
+    backdrop-filter: blur(4px);
+    text-shadow: 0 0 10px rgba(182, 227, 255, 0.45);
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+@keyframes infinite-horizontal-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .marquee {
+        padding: 16px 0;
+        margin-bottom: 32px;
+    }
+
+    .track {
+        gap: 32px;
+        animation-duration: 60s;
+    }
+
+    .marquee-item {
+        font-size: 16px;
+        padding: 7px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .marquee {
+        padding: 12px 0;
+        margin-bottom: 24px;
+    }
+
+    .track {
+        gap: 20px;
+        animation-duration: 45s;
+    }
+
+    .marquee-item {
+        font-size: 14px;
+        padding: 6px 12px;
+        letter-spacing: 0.3px;
+    }
+}

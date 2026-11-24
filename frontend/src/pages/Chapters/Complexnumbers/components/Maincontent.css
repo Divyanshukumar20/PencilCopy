@@ -1,0 +1,593 @@
+/* Fully scoped Pencilcopy styling. No Tailwind utilities required. */
+.pc-page {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #080e19;
+    color: #fff;
+}
+
+.pc-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 56px 32px;
+}
+.pc-page * {
+    box-sizing: border-box
+}
+
+.pc-page h1,
+.pc-page h2,
+.pc-page h3,
+.pc-page p {
+    margin: 0
+}
+
+.pc-page button,
+.pc-page input {
+    font: inherit
+}
+
+
+
+.pc-ambient {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 100%;
+    filter: blur(105px);
+    opacity: .3
+}
+
+.pc-ambient-a {
+    width: 440px;
+    height: 440px;
+    left: -170px;
+    top: -130px;
+    background: #0d9488
+}
+
+.pc-ambient-b {
+    width: 430px;
+    height: 430px;
+    right: -150px;
+    top: -120px;
+    background: #7c3aed
+}
+
+.pc-header {
+    margin-bottom: 80px
+}
+
+.pc-breadcrumb {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 27px
+}
+
+.pc-breadcrumb b {
+    color: #5eead4
+}
+
+.pc-breadcrumb span:nth-child(2) {
+    color: #475569
+}
+
+.pc-pill {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(45, 212, 191, .22);
+    background: rgba(45, 212, 191, .09);
+    border-radius: 999px;
+    padding: 7px 13px;
+    color: #99f6e4;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap
+}
+
+.pc-header h1 {
+    max-width: 850px;
+    margin: 23px 0 16px;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -1.8px
+}
+
+.pc-description {
+    max-width: 680px;
+    color: #94a3b8;
+    font-size: 17px;
+    line-height: 1.85
+}
+
+.pc-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 27px
+}
+
+.pc-metadata>div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 130px;
+    padding: 13px 19px;
+    background: rgba(255, 255, 255, .045);
+    border: 1px solid rgba(255, 255, 255, .09);
+    border-radius: 13px
+}
+
+.pc-metadata small,
+.pc-current small {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #94a3b8
+}
+
+.pc-metadata strong {
+    font-size: 14px
+}
+
+.pc-hero {
+    position: relative;
+    margin-top: 40px;
+    padding: 40px;
+    border: 1px solid rgba(45, 212, 191, .16);
+    border-radius: 26px;
+    background: linear-gradient(120deg, #142a32, #132233 55%, #171b36);
+    overflow: hidden
+}
+
+.pc-hero:after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    right: -50px;
+    top: -130px;
+    filter: blur(50px);
+    background: rgba(45, 212, 191, .12);
+    pointer-events: none
+}
+
+.pc-hero small {
+    color: #5eead4;
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: 800
+}
+
+.pc-hero>div {
+    margin: 25px 0 15px;
+    font-size: clamp(36px, 5vw, 62px);
+    font-weight: 800;
+    letter-spacing: -1.5px
+}
+
+.pc-hero>div span {
+    color: #5eead4
+}
+
+.pc-hero p {
+    max-width: 600px;
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.85
+}
+
+.pc-section {
+    margin: 0 0 80px
+}
+
+.pc-section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 27px
+}
+
+.pc-eyebrow {
+    color: #5eead4;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.3px;
+    margin-bottom: 10px !important
+}
+
+.pc-section-head h2 {
+    font-size: clamp(26px, 3vw, 35px);
+    letter-spacing: -.7px;
+    line-height: 1.3
+}
+
+.pc-section-head p:not(.pc-eyebrow) {
+    margin-top: 10px;
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.75;
+    max-width: 680px
+}
+
+.pc-purple-text {
+    color: #c4b5fd
+}
+
+.pc-lab {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 26px;
+    background: #111b2b;
+    box-shadow: 0 24px 90px rgba(0, 0, 0, .28)
+}
+
+.pc-lab-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(285px, 1fr)
+}
+
+.pc-graph-col {
+    min-width: 0;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    padding: 20px
+}
+
+.pc-graph {
+    background: #0b1322;
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 19px;
+    overflow: hidden
+}
+
+.pc-graph svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: crosshair;
+    touch-action: none;
+    user-select: none
+}
+
+.pc-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 17px;
+    color: #94a3b8;
+    font-size: 12px
+}
+
+.pc-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px
+}
+
+.pc-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    display: inline-block
+}
+
+.pc-teal {
+    background: #2dd4bf
+}
+
+.pc-purple {
+    background: #a78bfa
+}
+
+.pc-line {
+    width: 20px;
+    border-top: 2px solid #2dd4bf
+}
+
+.pc-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 25px
+}
+
+.pc-current {
+    padding: 19px;
+    border-radius: 17px;
+    background: #0b1322;
+    border: 1px solid rgba(45, 212, 191, .15);
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.pc-current strong {
+    font-size: clamp(20px, 2.5vw, 29px);
+    letter-spacing: -.5px;
+    overflow-wrap: anywhere
+}
+
+.pc-current em {
+    color: #5eead4;
+    font-style: normal
+}
+
+.pc-current>span {
+    color: #94a3b8;
+    font-size: 12px
+}
+
+.pc-slider-block label {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 11px
+}
+
+.pc-slider-block label b {
+    color: #5eead4
+}
+
+.pc-slider-block input {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    height: 18px;
+    accent-color: #2dd4bf
+}
+
+.pc-slider-block input.pc-imag-slider {
+    accent-color: #a78bfa
+}
+
+.pc-range-labels {
+    display: flex;
+    justify-content: space-between;
+    color: #64748b;
+    font-size: 11px;
+    margin-top: 3px
+}
+
+.pc-results {
+    display: grid;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, .1)
+}
+
+.pc-results>div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    font-size: 14px
+}
+
+.pc-results span {
+    color: #94a3b8
+}
+
+.pc-results strong {
+    font-size: 14px;
+    text-align: right;
+    overflow-wrap: anywhere
+}
+
+.pc-results .pc-accent {
+    color: #5eead4
+}
+
+.pc-reset {
+    margin-top: auto;
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: rgba(255, 255, 255, .05);
+    color: #e2e8f0;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background .2s, border-color .2s
+}
+
+.pc-reset:hover {
+    background: rgba(255, 255, 255, .11);
+    border-color: rgba(45, 212, 191, .6)
+}
+
+.pc-reset:focus-visible {
+    outline: 2px solid #2dd4bf;
+    outline-offset: 3px
+}
+
+.pc-remember {
+    padding: 16px 24px;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    background: rgba(45, 212, 191, .035);
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8
+}
+
+.pc-remember b {
+    color: #5eead4
+}
+
+.pc-concept-list {
+    display: grid;
+    gap: 24px
+}
+
+.pc-concept {
+    background: #111b2b;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 25px;
+    padding: 34px;
+    transition: border-color .25s
+}
+
+.pc-concept:hover {
+    border-color: rgba(45, 212, 191, .32)
+}
+
+.pc-concept-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 25px
+}
+
+.pc-number {
+    display: flex;
+    flex: 0 0 44px;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(45, 212, 191, .1);
+    color: #5eead4;
+    font-size: 14px;
+    font-weight: 800
+}
+
+.pc-concept-title h3 {
+    font-size: clamp(20px, 2.5vw, 25px);
+    line-height: 1.35
+}
+
+.pc-concept-title small {
+    display: block;
+    color: #64748b;
+    margin-top: 7px;
+    font-size: 11px;
+    letter-spacing: 1.6px
+}
+
+.pc-paragraphs {
+    display: grid;
+    gap: 17px
+}
+
+.pc-paragraphs p {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 2;
+    max-width: 900px
+}
+
+.pc-equations {
+    display: grid;
+    gap: 15px;
+    margin-top: 25px
+}
+
+.pc-equation {
+    padding: 22px;
+    background: #0b1322;
+    border: 1px solid rgba(45, 212, 191, .12);
+    border-radius: 16px;
+    color: #5eead4;
+    text-align: center;
+    overflow-x: auto
+}
+
+.pc-equation .katex-display {
+    margin: .3em 0
+}
+
+.pc-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 27px;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    color: #64748b;
+    font-size: 12px
+}
+
+@media(max-width:850px) {
+    .pc-lab-grid {
+        grid-template-columns: minmax(0, 1fr)
+    }
+
+    .pc-graph-col {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .1)
+    }
+
+    .pc-controls {
+        padding: 25px
+    }
+
+    .pc-container {
+        padding: 40px 22px
+    }
+
+    .pc-header {
+        margin-bottom: 60px
+    }
+
+    .pc-section {
+        margin-bottom: 65px
+    }
+}
+
+@media(max-width:520px) {
+    .pc-container {
+        padding: 28px 15px
+    }
+
+    .pc-hero {
+        padding: 26px 22px
+    }
+
+    .pc-graph-col {
+        padding: 11px
+    }
+
+    .pc-controls {
+        padding: 20px;
+        gap: 22px
+    }
+
+    .pc-concept {
+        padding: 22px 18px
+    }
+
+    .pc-section-head h2 {
+        font-size: 26px
+    }
+
+    .pc-header h1 {
+        letter-spacing: -1px
+    }
+
+    .pc-description {
+        font-size: 15px
+    }
+
+    .pc-legend {
+        gap: 10px
+    }
+
+    .pc-remember {
+        padding: 15px 17px
+    }
+}

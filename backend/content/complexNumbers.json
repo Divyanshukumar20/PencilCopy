@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Complex Numbers",
+    "shortTitle": "Introduction",
+    "description": "Understand the number system beyond real numbers.",
+    "duration": "15 min",
+    "difficulty": "Beginner",
+    "concepts": [
+      {
+        "heading": "Why do we need complex numbers?",
+        "paragraphs": [
+          "Consider the equation x² + 1 = 0.",
+          "This gives x² = -1. But no real number has a negative square.",
+          "To solve equations like this, mathematicians introduced imaginary numbers."
+        ],
+        "equations": [
+          {
+            "latex": "x^2+1=0"
+          },
+          {
+            "latex": "x^2=-1"
+          },
+          {
+            "latex": "x=\\pm i"
+          }
+        ],
+        "insight": "The imaginary unit i is defined by i² = -1."
+      },
+      {
+        "heading": "Definition of a complex number",
+        "paragraphs": [
+          "A complex number is expressed in the form a + ib, where a and b are real numbers."
+        ],
+        "equations": [
+          {
+            "latex": "z=a+ib"
+          },
+          {
+            "latex": "a,b\\in\\mathbb{R}"
+          }
+        ],
+        "insight": "a is called the real part and b is called the imaginary part."
+      },
+      {
+        "heading": "Real and imaginary parts",
+        "paragraphs": [
+          "Every complex number has two components. The real component and the coefficient of the imaginary unit."
+        ],
+        "equations": [
+          {
+            "latex": "\\operatorname{Re}(z)=a"
+          },
+          {
+            "latex": "\\operatorname{Im}(z)=b"
+          }
+        ],
+        "insight": "Remember that Im(z) = b, not ib."
+      }
+    ],
+    "examples": [
+      {
+        "question": "Find the real and imaginary parts of z = 5 + 7i.",
+        "steps": [
+          "Compare z = 5 + 7i with z = a + ib.",
+          "The real component is 5.",
+          "The coefficient of i is 7."
+        ],
+        "answer": "Re(z) = 5, Im(z) = 7"
+      },
+      {
+        "question": "Is z = 4 a complex number?",
+        "steps": [
+          "Write 4 as 4 + 0i.",
+          "This is of the form a + ib."
+        ],
+        "answer": "Yes. Every real number is also a complex number."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Algebra of Complex Numbers",
+    "shortTitle": "Algebra",
+    "description": "Addition, subtraction, multiplication and division.",
+    "duration": "20 min",
+    "difficulty": "Beginner",
+    "concepts": [],
+    "examples": []
+  },
+  {
+    "id": 3,
+    "title": "Conjugate and Properties",
+    "shortTitle": "Conjugate",
+    "description": "Explore conjugates and their algebraic properties.",
+    "duration": "20 min",
+    "difficulty": "Intermediate",
+    "concepts": [],
+    "examples": []
+  },
+  {
+    "id": 4,
+    "title": "Modulus and Properties",
+    "shortTitle": "Modulus",
+    "description": "Understand modulus geometrically and algebraically.",
+    "duration": "25 min",
+    "difficulty": "Intermediate",
+    "concepts": [],
+    "examples": []
+  },
+  {
+    "id": 5,
+    "title": "Argand Plane",
+    "shortTitle": "Argand Plane",
+    "description": "Represent complex numbers geometrically.",
+    "duration": "25 min",
+    "difficulty": "Intermediate",
+    "concepts": [],
+    "examples": []
+  },
+  {
+    "id": 6,
+    "title": "Geometrical Representation",
+    "shortTitle": "Geometry",
+    "description": "Understand distances, circles and geometrical loci.",
+    "duration": "30 min",
+    "difficulty": "Advanced",
+    "concepts": [],
+    "examples": []
+  },
+  {
+    "id": 7,
+    "title": "Polar Form",
+    "shortTitle": "Polar Form",
+    "description": "Represent complex numbers using modulus and argument.",
+    "duration": "25 min",
+    "difficulty": "Intermediate",
+    "concepts": [],
+    "examples": []
+  },
+  {
+    "id": 8,
+    "title": "Argument of Complex Numbers",
+    "shortTitle": "Argument",
+    "description": "Understand principal argument and its properties.",
+    "duration": "25 min",
+    "difficulty": "Advanced",
+    "concepts": [],
+    "examples": []
+  },
+  {
+    "id": 9,
+    "title": "De Moivre's Theorem",
+    "shortTitle": "De Moivre",
+    "description": "Explore powers and roots using polar representation.",
+    "duration": "30 min",
+    "difficulty": "Advanced",
+    "concepts": [],
+    "examples": []
+  },
+  {
+    "id": 10,
+    "title": "Roots of Unity",
+    "shortTitle": "Roots of Unity",
+    "description": "Understand nth roots of unity and their properties.",
+    "duration": "30 min",
+    "difficulty": "Advanced",
+    "concepts": [],
+    "examples": []
+  },
+  {
+    "id": 11,
+    "title": "Locus",
+    "shortTitle": "Locus",
+    "description": "Solve geometrical problems involving complex numbers.",
+    "duration": "30 min",
+    "difficulty": "Advanced",
+    "concepts": [],
+    "examples": []
+  },
+  {
+    "id": 12,
+    "title": "Advanced JEE Applications",
+    "shortTitle": "JEE Applications",
+    "description": "Apply complex number concepts to challenging problems.",
+    "duration": "40 min",
+    "difficulty": "Advanced",
+    "concepts": [],
+    "examples": []
+  }
+]
