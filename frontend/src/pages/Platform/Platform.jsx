@@ -1,7 +1,7 @@
 import {useState,useEffect,useCallback,useRef} from 'react';
 import {Link,NavLink,useNavigate,useParams} from 'react-router-dom';
 import {io} from 'socket.io-client';
-import {api,API_BASE,errorMessage} from '../../lib/api';
+import {api,SOCKET_BASE,errorMessage} from '../../lib/api';
 import {useAuth} from '../../lib/Auth';
 import './Platform.css';
 function Shell({title,children}) {
@@ -55,7 +55,7 @@ export function Attempt() {
 export function Contest() {
  const {id}=useParams(),[rows,setRows]=useState([]),[status,setStatus]=useState('Connecting…'),[error,setError]=useState('');
  useEffect(()=>{let socket,cancelled=false;
-  async function connect(){try{const {data}=await api.get('/api/socket-ticket');if(cancelled)return;socket=io(API_BASE,{auth:{token:data.token},withCredentials:true});socket.on('connect',()=>{socket.emit('contest:join',id,r=>{setStatus(r.error||'Live updates connected');});});socket.on('leaderboard:update',setRows);socket.on('disconnect',()=>setStatus('Reconnecting — refreshing scores periodically'));socket.on('connect_error',()=>setStatus('Live connection unavailable — refreshing scores periodically'));}catch(e){if(!cancelled)setError(errorMessage(e));}}
+  async function connect(){try{const {data}=await api.get('/api/socket-ticket');if(cancelled)return;socket=io(SOCKET_BASE,{auth:{token:data.token},withCredentials:true});socket.on('connect',()=>{socket.emit('contest:join',id,r=>{setStatus(r.error||'Live updates connected');});});socket.on('leaderboard:update',setRows);socket.on('disconnect',()=>setStatus('Reconnecting — refreshing scores periodically'));socket.on('connect_error',()=>setStatus('Live connection unavailable — refreshing scores periodically'));}catch(e){if(!cancelled)setError(errorMessage(e));}}
   async function refresh(){try{const {data}=await api.get(`/api/assessments/${id}/leaderboard`);if(!cancelled)setRows(data);}catch(e){if(!cancelled)setError(errorMessage(e));}}
   connect();refresh();const timer=setInterval(refresh,10000);return()=>{cancelled=true;clearInterval(timer);socket?.disconnect();};
  },[id]);

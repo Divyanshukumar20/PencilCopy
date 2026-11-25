@@ -1,15 +1,10 @@
 
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { api } from "../../../../lib/api";
 import { Link, useNavigate } from "react-router-dom";
 
 import Dummysidebar from "./Dummysidebar";
 import Maincontent from "./Maincontent";
-
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000",
-  withCredentials: true,
-});
 
 const Maincomplexnumbers = () => {
   const [currentTopicid, setCurrentTopicid] = useState(0);

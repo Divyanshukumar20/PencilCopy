@@ -1,6 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
+    { "source": "/users/:path*", "destination": "https://pencilcopy-api.onrender.com/users/:path*" },
+    { "source": "/api/:path*", "destination": "https://pencilcopy-api.onrender.com/api/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

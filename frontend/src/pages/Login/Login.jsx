@@ -42,7 +42,11 @@ const Login = () => {
                 }
             );
 
-            await refresh();
+            const user = await refresh();
+            if (!user) {
+                setError("validationError", {type:"manual",message:"Login was accepted, but the session could not be saved. Please retry."});
+                return;
+            }
             navigate(location.state?.from || '/dashboard');
 
         } catch (err) {
