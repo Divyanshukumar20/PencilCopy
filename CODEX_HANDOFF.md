@@ -105,3 +105,12 @@ The final 24 November run after the latest payment/UI edits reported 12 passing 
 - Do not claim a complete 1000-question bank, full syllabus, production-ready payments or a successful live Razorpay transaction based only on mocked tests.
 
 No `AGENTS.md` was found in the workspace during earlier inspection. Read any new local instructions if the project changes.
+
+## Deployment update — 25 November 2026
+
+- The GitHub repository is `https://github.com/Divyanshukumar20/PencilCopy` and `main` has been pushed. Its root contains `frontend/` and `backend/` directly. The old `CompleteLoginSignupPage` name remains only as the local checkout folder, not in the repository layout.
+- [DEPLOYMENT.md](./DEPLOYMENT.md) now leads with a **temporary Free staging** route. [render.yaml](./render.yaml) creates a Free Render Node web service and a Free Render Postgres database in Singapore. It connects the internal `DATABASE_URL`, generates separate JWT secrets, prompts for the exact Vercel origin and Razorpay **test** credentials, and runs repeatable migration and starter seed on start. Render/Vercel account-side creation has **not** been performed yet.
+- Backend accepts `DATABASE_URL` with local `DB_*` fallback. Production login cookies use `Secure; SameSite=None`; the API requires an exact `FRONTEND_ORIGIN` and rejects mutating requests from other origins. [frontend/vercel.json](./frontend/vercel.json) rewrites SPA routes. The root `.gitignore` excludes secrets and generated files.
+- User reported successful **local** Razorpay test-mode payment and live contest. A read-only local DB check confirmed the paid 100-coin order credited once. Public webhook delivery and all **deployed** flows are still unverified. New Render Postgres starts without local users, wallets or manually added content. `rinshu` must sign up on the deployed app and be promoted via the CLI against Render's external database URL; see [DEPLOYMENT.md](./DEPLOYMENT.md).
+- The latest verification: backend `npm test` 13/13 passing and frontend `npm run build` passing. Build still warns about the large JS bundle. Git push of the free staging Blueprint is commit `fba1282`.
+- Free Render web sleeps after 15 minutes idle, and Free Postgres expires after 30 days with no managed backups. Keep Razorpay in test mode; this deployment is for short-lived testing, not reliable public paid contests.
